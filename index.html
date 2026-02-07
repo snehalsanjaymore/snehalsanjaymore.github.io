@@ -2,43 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Portfolio</title>
+  <title>Snehal Sanjay More– Sales and Customer Success Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    h1 { font-size: 2.2rem; }
-    .section { margin-bottom: 2rem; }
-    .project { margin-bottom: 1rem; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Snehal Sanjay More</h1>
-  <p>Short tagline about who you are (e.g., Frontend Developer, Data Analyst, Designer).</p>
-
-  <div class="section">
-    <h2>About Me</h2>
-    <p>Write 3–5 lines about your background, skills, and what you’re looking for.</p>
-  </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title 1</h3>
-      <p>1–2 sentence description of what this project does and what you used.</p>
-      <p><a href="#">Live demo</a> | <a href="#">Source code</a></p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Snehal Sanjay More</h1>
+      <p class="tagline">Sales Professional | Building relationships & closing deals</p>
+      <a href="#contact" class="btn-primary">Contact Me</a>
     </div>
-    <div class="project">
-      <h3>Project Title 2</h3>
-      <p>Another short description.</p>
-      <p><a href="#">Live demo</a> | <a href="#">Source code</a></p>
-    </div>
-  </div>
+  </header>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-  </div>
+  <nav class="top-nav">
+    <a href="#about">About</a>
+    <a href="#results">Results</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        As a seasoned Sales Business Manager, I bring extensive experience in client relationship management, strategic account planning, and solution development to drive business growth and deliver value-driven outcomes. With a strong technical foundation in Electronics & Telecommunication Engineering and a proven track record managing diverse client portfolios, I excel at identifying growth opportunities, building strategic partnerships, and fostering long-term relationships that support sustainable success.
+
+Since moving to Denmark, I’ve been actively expanding my horizons — learning Danish, volunteering at community events, and engaging in networking activities to better understand the local culture and business environment. These experiences have strengthened my adaptability, intercultural communication, and ability to connect with people from different backgrounds.
+
+My core skills and competencies include:
+
+Strategic Account Management & Key Client Retention
+B2B & B2C Sales Strategy
+Business Development & Market Expansion
+Solution Selling & Consultative Sales
+Negotiation & Contract Management
+Customer Success & Experience Optimization
+Cross-Functional Leadership & Collaboration
+Data-Driven Decision Making & Performance Analysis
+Project Management & Process Improvement
+CRM Tools (Salesforce, HubSpot) & Pipeline Management
+Intercultural Communication & Team Engagement
+
+I’m passionate about leveraging my global experience, technical insight, and people-centric approach to create meaningful business impact, exceed client expectations, and contribute to organizational growth.
+      </p>
+    </section>
+
+    <section id="results" class="section">
+      <h2>Key Results</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>120% of annual quota</h3>
+          <p>Exceeded yearly target by focusing on upselling and strategic account management.</p>
+        </div>
+        <div class="card">
+          <h3>Top 5% performer</h3>
+          <p>Ranked in the top performers across the region for three consecutive quarters.</p>
+        </div>
+        <div class="card">
+          <h3>Expanded key accounts</h3>
+          <p>Grew revenue in key accounts by building trust and consistent follow‑up.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills & Tools</h2>
+      <div class="skills">
+        <ul>
+          <li>Prospecting & lead generation</li>
+          <li>Cold calling & email outreach</li>
+          <li>Negotiation & closing</li>
+        </ul>
+        <ul>
+          <li>Account management</li>
+          <li>CRM tools (HubSpot, Salesforce)</li>
+          <li>Presentation & demo skills</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>Phone: +45 00 00 00 00</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
