@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehal More Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:#0f172a;color:#e2e8f0;overflow-x:hidden}
+    nav{position:fixed;top:0;width:100%;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(2,6,23,0.85);backdrop-filter:blur(10px);z-index:50}
+    nav a{color:#38bdf8;margin-left:1rem;text-decoration:none;transition:.3s}
+    nav a:hover{color:white}
+    header{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 10%;background:linear-gradient(120deg,#020617,#1e293b)}
+    .hero-text{animation:slideLeft 1s ease forwards}
+    .hero-text h1{font-size:3rem;margin-bottom:.5rem}
+    .hero-text h3{color:#38bdf8;margin-bottom:1rem}
+    .hero-text p{opacity:.9}
+    .hero-img{display:flex;justify-content:center;animation:floatIn 1.2s ease forwards}
+    .hero-img img{width:260px;height:260px;border-radius:50%;object-fit:cover;border:5px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,.4);animation:float 5s ease-in-out infinite}
+    section{padding:90px 10%}
+    h2{margin-bottom:1rem}
+    .card{background:#1e293b;padding:1.5rem;border-radius:14px;margin-top:1rem;transform:translateY(40px);opacity:0;transition:.6s}
+    .card.show{transform:translateY(0);opacity:1}
+    .timeline{border-left:3px solid #38bdf8;padding-left:1rem}
+    .timeline-item{margin-bottom:1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+    .progress{background:#020617;border-radius:20px;overflow:hidden;margin:.5rem 0 1rem}
+    .bar{height:10px;width:0;background:#38bdf8;transition:width 1.5s}
+    footer{text-align:center;padding:2rem;background:#020617;margin-top:2rem}
+    @keyframes slideLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes floatIn{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <strong>Snehal More</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-text">
+    <h1>Snehal More</h1>
+    <h3>Business Development & Sales Manager</h3>
+    <p>
+      Driving revenue growth through strategic account management, B2B and B2C
+      sales strategy, and client relationship development. Experienced in
+      pipeline optimization, solution selling and cross functional collaboration.
+    </p>
+  </div>
+  <div class="hero-img">
+    <img src="https://via.placeholder.com/300" alt="Profile Photo">
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    Seasoned sales professional experienced in strategic account planning,
+    solution development and relationship management to drive business growth.
+    With a technical background in Electronics & Telecommunication Engineering,
+    I bring analytical thinking and adaptability to diverse markets. Currently
+    expanding professional and cultural knowledge in Denmark while strengthening
+    intercultural communication and networking skills.
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Work Experience</h2>
+  <div class="card timeline">
+    <div class="timeline-item">
+      <strong>Business Development & Sales Manager — FinVachi Technologies</strong><br>
+      Jun 2023 – Jun 2024<br>
+      Managed strategic client relationships, identified growth opportunities,
+      collaborated on tailored solutions and delivered engagement programs to
+      improve adoption and retention.
+    </div>
+    <div class="timeline-item">
+      <strong>Sales Manager (Assistant Manager) — FinoFy Technologies</strong><br>
+      Oct 2022 – May 2023<br>
+      Handled SMB and enterprise portfolios, onboarded digital solutions and
+      improved operational efficiency through process optimization.
+    </div>
+    <div class="timeline-item">
+      <strong>Senior Client Relationship Manager — CapitalVia</strong><br>
+      Nov 2020 – Apr 2022<br>
+      Advised high value clients, increased account revenue through upselling
+      and mentored team members to enhance service delivery.
+    </div>
+    <div class="timeline-item">
+      <strong>Client Acquisition Manager — CapitalVia</strong><br>
+      Sep 2020 – Oct 2021<br>
+      Executed acquisition strategies, built pipelines and developed onboarding
+      programs to improve satisfaction and retention.
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    Bachelor of Engineering — Electronics & Telecommunication (2017–2020)<br>
+    Government Polytechnic Nashik — Diploma Electronics & Telecommunication (2014–2017)
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">CRM pipeline optimization and account value expansion initiatives</div>
+    <div class="card">Client onboarding and education program development</div>
+    <div class="card">Market expansion and solution implementation collaborations</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Core Skills</h2>
+  <div class="card">
+    Business Development
+    <div class="progress"><div class="bar" data-width="90%"></div></div>
+    Strategic Account Management
+    <div class="progress"><div class="bar" data-width="88%"></div></div>
+    CRM & Pipeline Management
+    <div class="progress"><div class="bar" data-width="85%"></div></div>
+    Negotiation & Communication
+    <div class="progress"><div class="bar" data-width="87%"></div></div>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="grid">
+    <div class="card">Expanded account value through data driven growth strategies</div>
+    <div class="card">Improved operational efficiency by 20% through process optimization</div>
+    <div class="card">Built long term client partnerships across B2B and B2C segments</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    Email: snehalsanjaymore@gmail.com<br>
+    LinkedIn: www.linkedin.com/in/snehal-more-12a31614b<br>
+    Phone: +45 55 20 60 77
+  </div>
+</section>
+
+<footer>
+  © 2026 Snehal More
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('show');
+   const bars=entry.target.querySelectorAll('.bar');
+   bars.forEach(bar=>bar.style.width=bar.dataset.width);
+  }
+ })
+},{threshold:0.2});
+document.querySelectorAll('.card').forEach(c=>observer.observe(c));
+</script>
+
+</body>
+</html>
