@@ -7,76 +7,111 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#050814;
-      --card:#0d1222;
-      --text:#ffffff;
-      --muted:#b8c1d9;
-      --line:rgba(255,255,255,.10);
-      --accent1:#ff7a45;
-      --accent2:#ff2e93;
-      --shadow:0 20px 60px rgba(0,0,0,.45);
-      --radius:22px;
+      --bg:#07101f;
+      --bg-2:#0b1628;
+      --card:#101b31;
+      --card-2:#15213a;
+      --text:#f6f8ff;
+      --muted:#b4bfd8;
+      --line:rgba(255,255,255,.09);
+      --accent1:#ff8a5c;
+      --accent2:#ff4f9a;
+      --accent3:#9da9ff;
+      --shadow:0 20px 60px rgba(0,0,0,.42);
+      --radius:24px;
     }
 
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       font-family:"Poppins",sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(255,122,69,.18), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(255,46,147,.15), transparent 22%),
-        linear-gradient(180deg, #090d1a 0%, #050814 100%);
       color:var(--text);
       min-height:100vh;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,138,92,.14), transparent 20%),
+        radial-gradient(circle at 85% 20%, rgba(255,79,154,.11), transparent 18%),
+        radial-gradient(circle at 70% 80%, rgba(157,169,255,.08), transparent 22%),
+        linear-gradient(180deg, #08111f 0%, #050912 100%);
     }
 
-    .container{width:min(1200px,92%);margin:0 auto}
+    .container{
+      width:min(1180px,92%);
+      margin:0 auto;
+    }
 
     .navbar{
-      position:sticky;top:0;z-index:1000;
+      position:sticky;
+      top:0;
+      z-index:1000;
       backdrop-filter:blur(18px);
-      background:rgba(5,8,20,.72);
+      background:rgba(5,9,18,.76);
       border-bottom:1px solid var(--line);
     }
 
     .nav-inner{
-      display:flex;align-items:center;justify-content:space-between;gap:20px;
-      padding:18px 0;flex-wrap:wrap;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 0;
+      flex-wrap:wrap;
     }
 
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+    }
+
     .brand-mark{
-      width:42px;height:42px;border-radius:14px;
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      color:#fff;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      display:grid;place-items:center;
-      box-shadow:0 0 25px rgba(255,91,110,.35);
+      box-shadow:0 12px 30px rgba(255,98,127,.22);
     }
 
-    .tabs{display:flex;flex-wrap:wrap;gap:10px}
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
     .tablinks{
-      border:1px solid rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.09);
       background:rgba(255,255,255,.03);
       color:var(--muted);
-      padding:10px 16px;
+      padding:10px 15px;
       border-radius:999px;
       cursor:pointer;
       font-weight:500;
       transition:.25s ease;
     }
+
+    .tablinks:hover{
+      color:#fff;
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.18);
+    }
+
     .tablinks.active{
       color:#fff;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
       border-color:transparent;
-      box-shadow:0 12px 28px rgba(255,80,110,.28);
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      box-shadow:0 14px 30px rgba(255,92,125,.22);
     }
 
     .hero{
-      padding:44px 0 22px;
+      min-height:calc(100vh - 88px);
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:28px;
+      grid-template-columns:1.05fr .95fr;
       align-items:center;
-      min-height:calc(100vh - 90px);
+      gap:32px;
+      padding:42px 0 20px;
     }
 
     .hero-text h1{
@@ -94,85 +129,141 @@
 
     .hero-text p{
       color:var(--muted);
+      line-height:1.85;
       max-width:650px;
-      line-height:1.8;
+      margin-bottom:24px;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
       margin-bottom:26px;
     }
 
-    .hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
     .meta-chip{
-      padding:10px 14px;border-radius:999px;
-      background:rgba(255,255,255,.04);
+      padding:10px 14px;
+      border-radius:999px;
       border:1px solid var(--line);
-      color:#dfe5f8;font-size:.92rem;
+      background:rgba(255,255,255,.04);
+      color:#dbe2f5;
+      font-size:.92rem;
     }
 
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
     .btn{
-      padding:12px 20px;border-radius:999px;border:none;cursor:pointer;
-      font-weight:600;transition:.25s ease;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      padding:12px 20px;
+      border-radius:999px;
+      transition:.25s ease;
     }
+
     .btn-primary{
+      color:#fff;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      color:white;
-      box-shadow:0 18px 34px rgba(255,80,110,.25);
+      box-shadow:0 18px 34px rgba(255,92,125,.22);
     }
+
     .btn-secondary{
-      background:transparent;color:#fff;border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      background:transparent;
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
     }
 
     .hero-card{
-      background:linear-gradient(180deg, rgba(18,25,45,.92), rgba(13,18,34,.92));
-      border:1px solid var(--line);
-      border-radius:34px;
-      padding:22px;
-      box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
+      background:linear-gradient(180deg, rgba(21,33,58,.92), rgba(16,27,49,.92));
+      border:1px solid var(--line);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      padding:22px;
     }
 
     .hero-card::before{
       content:"";
-      position:absolute;inset:-80px;
+      position:absolute;
+      inset:-80px;
       background:
-        radial-gradient(circle at top left, rgba(255,122,69,.18), transparent 40%),
-        radial-gradient(circle at bottom right, rgba(255,46,147,.16), transparent 38%);
+        radial-gradient(circle at top left, rgba(255,138,92,.16), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(157,169,255,.12), transparent 38%);
       filter:blur(10px);
-      z-index:0;
     }
 
-    .profile{position:relative;z-index:1;text-align:center}
+    .profile{
+      position:relative;
+      z-index:1;
+      text-align:center;
+    }
+
     .profile-img{
       width:100%;
-      max-width:320px;
+      max-width:330px;
       aspect-ratio:1/1;
       object-fit:cover;
       border-radius:28px;
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow:0 20px 45px rgba(0,0,0,.35);
-      margin:0 auto 18px;
       display:block;
+      margin:0 auto 18px;
+      border:1px solid rgba(255,255,255,.11);
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
     }
 
-    .profile h2{font-size:1.9rem;margin-bottom:6px}
-    .profile .title{color:#d6def3;margin-bottom:10px;font-weight:500}
-    .profile .small{color:var(--muted);font-size:.95rem;line-height:1.7}
+    .profile h2{
+      font-size:1.9rem;
+      margin-bottom:6px;
+    }
 
-    .section-box{
-      margin-top:18px;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow);
+    .profile .title{
+      font-weight:500;
+      color:#d8def0;
+      margin-bottom:10px;
+    }
+
+    .profile .small{
+      color:var(--muted);
+      line-height:1.75;
+      font-size:.95rem;
+    }
+
+    .tabcontent{
+      display:none;
+    }
+
+    .tabcontent.active{
+      display:block;
       animation:fadeUp .45s ease;
     }
 
-    .tabcontent{display:none}
-    .tabcontent.active{display:block}
+    .section-box{
+      margin:18px 0 0;
+      padding:26px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
 
-    .section-box h3{font-size:1.6rem;margin-bottom:12px}
-    .section-box p,.section-box li{color:var(--muted);line-height:1.8}
+    .section-box h3{
+      font-size:1.7rem;
+      margin-bottom:12px;
+    }
+
+    .section-box p,
+    .section-box li{
+      color:var(--muted);
+      line-height:1.8;
+    }
 
     .grid-2{
       display:grid;
@@ -181,21 +272,31 @@
       margin-top:18px;
     }
 
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+
     .info-card{
-      background:rgba(255,255,255,.03);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border:1px solid var(--line);
       border-radius:18px;
       padding:18px;
     }
 
     .pill-list{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:14px
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
     }
 
     .pill{
       padding:9px 13px;
       border-radius:999px;
-      background:rgba(255,255,255,.05);
+      background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.08);
       color:#edf1ff;
       font-size:.9rem;
@@ -215,8 +316,11 @@
     .timeline-item::before{
       content:"";
       position:absolute;
-      left:-25px;top:6px;
-      width:12px;height:12px;border-radius:50%;
+      left:-25px;
+      top:6px;
+      width:12px;
+      height:12px;
+      border-radius:50%;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
       box-shadow:0 0 18px rgba(255,122,69,.45);
     }
@@ -226,7 +330,7 @@
 
     .contact-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(2,minmax(0,1fr));
       gap:16px;
       margin-top:16px;
     }
@@ -239,7 +343,16 @@
     }
 
     .contact-item span{
-      display:block;color:#fff;font-weight:600;margin-bottom:6px;
+      display:block;
+      color:#fff;
+      font-weight:600;
+      margin-bottom:6px;
+    }
+
+    .muted-note{
+      color:var(--muted);
+      font-size:.92rem;
+      margin-top:10px;
     }
 
     @keyframes fadeUp{
@@ -248,8 +361,8 @@
     }
 
     @media (max-width:900px){
-      .hero{grid-template-columns:1fr;min-height:auto;padding-top:24px}
-      .grid-2,.contact-grid{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr;min-height:auto}
+      .grid-2,.grid-3,.contact-grid{grid-template-columns:1fr}
       .nav-inner{justify-content:center}
       .hero-text{order:2}
       .hero-card{order:1}
@@ -268,13 +381,14 @@
         </div>
       </div>
 
-      <nav class="tabs">
-        <button class="tablinks active" onclick="openTab(event, 'about')" id="defaultOpen">About</button>
-        <button class="tablinks" onclick="openTab(event, 'skills')">Skills</button>
-        <button class="tablinks" onclick="openTab(event, 'experience')">Experience</button>
-        <button class="tablinks" onclick="openTab(event, 'education')">Education</button>
-        <button class="tablinks" onclick="openTab(event, 'achievements')">Achievements</button>
-        <button class="tablinks" onclick="openTab(event, 'contact')">Contact</button>
+      <nav class="tabs" role="tablist" aria-label="Portfolio sections">
+        <button class="tablinks active" role="tab" aria-selected="true" aria-controls="about" id="about-tab" onclick="openTab(event, 'about')">About</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="skills" id="skills-tab" onclick="openTab(event, 'skills')">Skills</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="experience" id="experience-tab" onclick="openTab(event, 'experience')">Experience</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="education" id="education-tab" onclick="openTab(event, 'education')">Education</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="certification" id="certification-tab" onclick="openTab(event, 'certification')">Certification</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="achievements" id="achievements-tab" onclick="openTab(event, 'achievements')">Achievements</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="contact" id="contact-tab" onclick="openTab(event, 'contact')">Contact</button>
       </nav>
     </div>
   </header>
@@ -285,13 +399,13 @@
         <h1>Hi, I'm <span class="gradient">Snehal More</span></h1>
         <p>
           Business Development professional with strong experience in account management,
-          client relationship building, solution selling, and revenue growth.
+          client relationships, solution selling, and revenue growth.
         </p>
 
         <div class="hero-meta">
           <div class="meta-chip">Copenhagen, Denmark</div>
-          <div class="meta-chip">Sales Strategy</div>
-          <div class="meta-chip">Customer Onboarding</div>
+          <div class="meta-chip">English & Danish</div>
+          <div class="meta-chip">Salesforce / HubSpot</div>
         </div>
 
         <div class="hero-actions">
@@ -309,13 +423,14 @@
           </div>
           <div class="small">
             Email: moresnehalsanjay@gmail.com<br>
+            Phone: +45 55 20 60 77<br>
             LinkedIn: linkedin.com/in/snehal-more-12a31614b
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="tabcontent active section-box">
+    <section id="about" class="tabcontent active section-box" role="tabpanel" aria-labelledby="about-tab">
       <h3>About</h3>
       <p>
         As a seasoned Sales Business Manager, I bring extensive experience in client relationship management,
@@ -325,21 +440,21 @@
         <div class="info-card">
           <h4>Summary</h4>
           <p>
-            I have a strong technical foundation in Electronics & Telecommunication Engineering and a proven
-            track record managing diverse client portfolios.
+            I have a strong technical foundation in Electronics & Telecommunication Engineering and a proven track record
+            managing diverse client portfolios.
           </p>
         </div>
         <div class="info-card">
-          <h4>About me in Denmark</h4>
+          <h4>Why I stand out</h4>
           <p>
-            Since moving to Denmark, I have been learning Danish, volunteering at community events,
-            and networking to better understand the local culture and business environment.
+            Since moving to Denmark, I have been learning Danish, volunteering, and networking to strengthen my adaptability
+            and intercultural communication.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="tabcontent section-box">
+    <section id="skills" class="tabcontent section-box" role="tabpanel" aria-labelledby="skills-tab">
       <h3>Skills</h3>
       <div class="pill-list">
         <span class="pill">Strategic Account Management</span>
@@ -358,7 +473,7 @@
       </div>
     </section>
 
-    <section id="experience" class="tabcontent section-box">
+    <section id="experience" class="tabcontent section-box" role="tabpanel" aria-labelledby="experience-tab">
       <h3>Experience</h3>
       <div class="timeline">
         <div class="timeline-item">
@@ -384,9 +499,9 @@
       </div>
     </section>
 
-    <section id="education" class="tabcontent section-box">
+    <section id="education" class="tabcontent section-box" role="tabpanel" aria-labelledby="education-tab">
       <h3>Education</h3>
-      <div class="grid-2">
+      <div class="grid-3">
         <div class="info-card">
           <h4>Karmaveer Baburao Thakare College of Engineering</h4>
           <p>Bachelors In Engineering, Electronics and Telecommunication · 2017 – 2020</p>
@@ -402,7 +517,22 @@
       </div>
     </section>
 
-    <section id="achievements" class="tabcontent section-box">
+    <section id="certification" class="tabcontent section-box" role="tabpanel" aria-labelledby="certification-tab">
+      <h3>Certification</h3>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4>Professional Certification</h4>
+          <p>Add your certification name here, such as Salesforce, HubSpot, sales training, or other professional courses.</p>
+        </div>
+        <div class="info-card">
+          <h4>Learning & Development</h4>
+          <p>Include workshops, short courses, online training, or volunteer learning experience that support your career growth.</p>
+        </div>
+      </div>
+      <p class="muted-note">If you share your certification details, I can fill this section properly for you.</p>
+    </section>
+
+    <section id="achievements" class="tabcontent section-box" role="tabpanel" aria-labelledby="achievements-tab">
       <h3>Achievements</h3>
       <div class="pill-list">
         <span class="pill">Revenue Growth</span>
@@ -414,7 +544,7 @@
       </div>
     </section>
 
-    <section id="contact" class="tabcontent section-box">
+    <section id="contact" class="tabcontent section-box" role="tabpanel" aria-labelledby="contact-tab">
       <h3>Contact</h3>
       <p>Feel free to reach out for opportunities, collaborations, or networking.</p>
 
@@ -445,20 +575,23 @@
       const tablinks = document.getElementsByClassName("tablinks");
 
       for (let i = 0; i < tabcontent.length; i++) tabcontent[i].classList.remove("active");
-      for (let i = 0; i < tablinks.length; i++) tablinks[i].classList.remove("active");
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+        tablinks[i].setAttribute("aria-selected", "false");
+      }
 
       document.getElementById(tabName).classList.add("active");
       evt.currentTarget.classList.add("active");
+      evt.currentTarget.setAttribute("aria-selected", "true");
       document.getElementById(tabName).scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function openTabById(id) {
-      const button = [...document.querySelectorAll(".tablinks")]
-        .find(btn => btn.getAttribute("onclick")?.includes(`'${id}'`));
+      const button = document.getElementById(id + "-tab");
       if (button) button.click();
     }
 
-    document.getElementById("defaultOpen").click();
+    document.getElementById("about-tab").click();
   </script>
 </body>
 </html>
