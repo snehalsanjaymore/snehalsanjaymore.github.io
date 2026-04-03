@@ -1,273 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Snehal More | Sales Manager Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehal More | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050814;
+      --card:#0d1222;
+      --text:#ffffff;
+      --muted:#b8c1d9;
+      --line:rgba(255,255,255,.10);
+      --accent1:#ff7a45;
+      --accent2:#ff2e93;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:22px;
+    }
 
-<style>
-:root{
---dark:#0c0f1a;
---card:#151a2c;
---accent1:#ff6a3d;
---accent2:#ff2a92;
---text:#ffffff;
---muted:#aab3c5;
-}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Poppins",sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,122,69,.18), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255,46,147,.15), transparent 22%),
+        linear-gradient(180deg, #090d1a 0%, #050814 100%);
+      color:var(--text);
+      min-height:100vh;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    .container{width:min(1200px,92%);margin:0 auto}
 
-body{
-background:linear-gradient(180deg,#0c0f1a,#050814);
-color:var(--text);
-}
+    .navbar{
+      position:sticky;top:0;z-index:1000;
+      backdrop-filter:blur(18px);
+      background:rgba(5,8,20,.72);
+      border-bottom:1px solid var(--line);
+    }
 
-.wrapper{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
-}
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+      padding:18px 0;flex-wrap:wrap;
+    }
 
-/* NAV */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-padding:15px 0;
-z-index:1000;
-}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:grid;place-items:center;
+      box-shadow:0 0 25px rgba(255,91,110,.35);
+    }
 
-nav .wrapper{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+    .tabs{display:flex;flex-wrap:wrap;gap:10px}
+    .tablinks{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:10px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:500;
+      transition:.25s ease;
+    }
+    .tablinks.active{
+      color:#fff;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      border-color:transparent;
+      box-shadow:0 12px 28px rgba(255,80,110,.28);
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:14px;
-}
+    .hero{
+      padding:44px 0 22px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+      align-items:center;
+      min-height:calc(100vh - 90px);
+    }
 
-nav a:hover{
-color:var(--accent1);
-}
+    .hero-text h1{
+      font-size:clamp(2.4rem,5vw,4.8rem);
+      line-height:1.02;
+      margin-bottom:14px;
+    }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding-top:60px;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
-background-size:cover;
-background-position:center;
-}
+    .gradient{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
 
-.hero h1{
-font-size:60px;
-}
+    .hero-text p{
+      color:var(--muted);
+      max-width:650px;
+      line-height:1.8;
+      margin-bottom:26px;
+    }
 
-.hero span{
-background:linear-gradient(90deg,var(--accent1),var(--accent2));
--webkit-background-clip:text;
-color:transparent;
-}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+    .meta-chip{
+      padding:10px 14px;border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:#dfe5f8;font-size:.92rem;
+    }
 
-.hero p{
-margin-top:20px;
-max-width:600px;
-color:var(--muted);
-}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      padding:12px 20px;border-radius:999px;border:none;cursor:pointer;
+      font-weight:600;transition:.25s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      color:white;
+      box-shadow:0 18px 34px rgba(255,80,110,.25);
+    }
+    .btn-secondary{
+      background:transparent;color:#fff;border:1px solid rgba(255,255,255,.14);
+    }
 
-.btn{
-margin-top:30px;
-padding:14px 30px;
-border:none;
-border-radius:40px;
-background:linear-gradient(90deg,var(--accent1),var(--accent2));
-color:white;
-font-weight:600;
-cursor:pointer;
-}
+    .hero-card{
+      background:linear-gradient(180deg, rgba(18,25,45,.92), rgba(13,18,34,.92));
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
 
-/* SECTION */
-section{
-padding:90px 0;
-}
+    .hero-card::before{
+      content:"";
+      position:absolute;inset:-80px;
+      background:
+        radial-gradient(circle at top left, rgba(255,122,69,.18), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255,46,147,.16), transparent 38%);
+      filter:blur(10px);
+      z-index:0;
+    }
 
-h2{
-text-align:center;
-font-size:32px;
-margin-bottom:40px;
-background:linear-gradient(90deg,var(--accent1),var(--accent2));
--webkit-background-clip:text;
-color:transparent;
-}
+    .profile{position:relative;z-index:1;text-align:center}
+    .profile-img{
+      width:100%;
+      max-width:320px;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 20px 45px rgba(0,0,0,.35);
+      margin:0 auto 18px;
+      display:block;
+    }
 
-/* ABOUT */
-.about p{
-max-width:700px;
-margin:auto;
-text-align:center;
-color:var(--muted);
-line-height:1.7;
-}
+    .profile h2{font-size:1.9rem;margin-bottom:6px}
+    .profile .title{color:#d6def3;margin-bottom:10px;font-weight:500}
+    .profile .small{color:var(--muted);font-size:.95rem;line-height:1.7}
 
-/* EXPERIENCE */
-.experience-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
+    .section-box{
+      margin-top:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      animation:fadeUp .45s ease;
+    }
 
-.card{
-background:var(--card);
-padding:25px;
-border-radius:15px;
-}
+    .tabcontent{display:none}
+    .tabcontent.active{display:block}
 
-.card h3{
-margin-bottom:10px;
-}
-
-.card span{
-font-size:14px;
-color:var(--accent1);
-}
-
-.card p{
-margin-top:10px;
-color:var(--muted);
-font-size:14px;
-}
-
-/* SKILLS */
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.skill{
-background:var(--card);
-padding:20px;
-border-radius:12px;
-text-align:center;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-}
-
-.contact p{
-color:var(--muted);
-margin-bottom:20px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:var(--muted);
-border-top:1px solid #222;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero h1{font-size:40px;}
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-<div class="wrapper">
-<strong>SNEHAL MORE</strong>
-<div>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
-
-<section class="hero">
-<h1><span>Driving Growth</span> Through Strategic Sales</h1>
-<p>
-Results-driven Sales Manager with expertise in revenue expansion, client acquisition, and team leadership.
-</p>
-<button class="btn">Get In Touch</button>
-</section>
-
-<section id="about" class="about wrapper">
-<h2>About Me</h2>
-<p>
-I am a performance-oriented Sales Manager with proven success in increasing revenue,
-building high-performing teams, and developing long-term client relationships.
-My approach combines data-driven strategy with strong interpersonal leadership.
-</p>
-</section>
-
-<section id="experience" class="wrapper">
-<h2>Experience</h2>
-<div class="experience-grid">
-
-<div class="card">
-<h3>Senior Sales Manager</h3>
-<span>ABC Corporation | 2021 – Present</span>
-<p>
-Led a team of 15 sales professionals, increased annual revenue by 35%,
-and expanded into 3 new regional markets.
-</p>
-</div>
-
-<div class="card">
-<h3>Sales Team Lead</h3>
-<span>XYZ Solutions | 2018 – 2021</span>
-<p>
-Managed B2B sales operations, achieved 120% of quarterly targets,
-and improved client retention by 25%.
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="skills" class="wrapper">
-<h2>Skills</h2>
-<div class="skills-grid">
-<div class="skill">Revenue Growth Strategy</div>
-<div class="skill">Client Acquisition</div>
-<div class="skill">Team Leadership</div>
-<div class="skill">Negotiation & Closing</div>
-<div class="skill">CRM & Sales Analytics</div>
-<div class="skill">Market Expansion</div>
-</div>
-</section>
-
-<section id="contact" class="contact wrapper">
-<h2>Contact</h2>
-<p>Email: snehal@email.com</p>
-<p>Phone: +91 00000 00000</p>
-<button class="btn">Send Message</button>
-</section>
-
-<footer>
-© 2026 Snehal More | Sales Portfolio
-</footer>
-
-</body>
-</html>
+    .section-box h3{font-size:1.6rem;margin-bottom:12px}
+    .section-box p,.section
