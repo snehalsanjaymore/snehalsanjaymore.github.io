@@ -4,38 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Snehal More | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#07101f;
-      --bg-2:#0b1628;
-      --card:#101b31;
-      --card-2:#15213a;
-      --text:#f6f8ff;
-      --muted:#b4bfd8;
-      --line:rgba(255,255,255,.09);
-      --accent1:#ff8a5c;
-      --accent2:#ff4f9a;
-      --accent3:#9da9ff;
-      --shadow:0 20px 60px rgba(0,0,0,.42);
-      --radius:24px;
+      --navy:#0b1f3a;
+      --navy-2:#102a4c;
+      --charcoal:#1f2937;
+      --white:#ffffff;
+      --soft:#d7deea;
+      --line:rgba(255,255,255,.10);
+      --card:rgba(16,42,76,.72);
+      --accent1:#7aa9ff;
+      --accent2:#a9d2ff;
+      --shadow:0 24px 60px rgba(0,0,0,.35);
+      --radius:22px;
     }
 
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       font-family:"Poppins",sans-serif;
-      color:var(--text);
-      min-height:100vh;
+      color:var(--white);
       background:
-        radial-gradient(circle at 15% 10%, rgba(255,138,92,.14), transparent 20%),
-        radial-gradient(circle at 85% 20%, rgba(255,79,154,.11), transparent 18%),
-        radial-gradient(circle at 70% 80%, rgba(157,169,255,.08), transparent 22%),
-        linear-gradient(180deg, #08111f 0%, #050912 100%);
+        radial-gradient(circle at top left, rgba(122,169,255,.16), transparent 25%),
+        radial-gradient(circle at top right, rgba(255,255,255,.08), transparent 20%),
+        linear-gradient(180deg, var(--charcoal) 0%, var(--navy) 100%);
+      min-height:100vh;
+      overflow-x:hidden;
     }
 
     .container{
-      width:min(1180px,92%);
+      width:min(1200px,92%);
       margin:0 auto;
     }
 
@@ -44,7 +43,7 @@
       top:0;
       z-index:1000;
       backdrop-filter:blur(18px);
-      background:rgba(5,9,18,.76);
+      background:rgba(11,31,58,.78);
       border-bottom:1px solid var(--line);
     }
 
@@ -68,11 +67,11 @@
       width:42px;
       height:42px;
       border-radius:14px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
       display:grid;
       place-items:center;
-      color:#fff;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:0 12px 30px rgba(255,98,127,.22);
+      color:#08111d;
+      box-shadow:0 0 26px rgba(122,169,255,.35);
     }
 
     .tabs{
@@ -82,9 +81,9 @@
     }
 
     .tablinks{
-      border:1px solid rgba(255,255,255,.09);
-      background:rgba(255,255,255,.03);
-      color:var(--muted);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:var(--soft);
       padding:10px 15px;
       border-radius:999px;
       cursor:pointer;
@@ -94,29 +93,29 @@
 
     .tablinks:hover{
       color:#fff;
+      border-color:rgba(255,255,255,.22);
       transform:translateY(-1px);
-      border-color:rgba(255,255,255,.18);
     }
 
     .tablinks.active{
-      color:#fff;
-      border-color:transparent;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:0 14px 30px rgba(255,92,125,.22);
+      color:#06111f;
+      border-color:transparent;
+      box-shadow:0 12px 28px rgba(122,169,255,.22);
     }
 
     .hero{
-      min-height:calc(100vh - 88px);
+      min-height:calc(100vh - 86px);
       display:grid;
       grid-template-columns:1.05fr .95fr;
+      gap:30px;
       align-items:center;
-      gap:32px;
-      padding:42px 0 20px;
+      padding:34px 0 20px;
     }
 
     .hero-text h1{
       font-size:clamp(2.4rem,5vw,4.8rem);
-      line-height:1.02;
+      line-height:1.03;
       margin-bottom:14px;
     }
 
@@ -128,10 +127,10 @@
     }
 
     .hero-text p{
-      color:var(--muted);
+      color:var(--soft);
       line-height:1.85;
       max-width:650px;
-      margin-bottom:24px;
+      margin-bottom:26px;
     }
 
     .hero-meta{
@@ -144,9 +143,9 @@
     .meta-chip{
       padding:10px 14px;
       border-radius:999px;
+      background:rgba(255,255,255,.06);
       border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:#dbe2f5;
+      color:#edf3ff;
       font-size:.92rem;
     }
 
@@ -157,23 +156,23 @@
     }
 
     .btn{
+      padding:12px 20px;
+      border-radius:999px;
       border:none;
       cursor:pointer;
       font-weight:600;
-      padding:12px 20px;
-      border-radius:999px;
       transition:.25s ease;
     }
 
     .btn-primary{
-      color:#fff;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:0 18px 34px rgba(255,92,125,.22);
+      color:#07111d;
+      box-shadow:0 18px 34px rgba(122,169,255,.22);
     }
 
     .btn-secondary{
-      color:#fff;
       background:transparent;
+      color:#fff;
       border:1px solid rgba(255,255,255,.14);
     }
 
@@ -182,13 +181,13 @@
     }
 
     .hero-card{
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(180deg, rgba(21,33,58,.92), rgba(16,27,49,.92));
+      background:linear-gradient(180deg, rgba(16,42,76,.86), rgba(11,31,58,.96));
       border:1px solid var(--line);
       border-radius:34px;
+      padding:24px;
       box-shadow:var(--shadow);
-      padding:22px;
+      position:relative;
+      overflow:hidden;
     }
 
     .hero-card::before{
@@ -196,9 +195,10 @@
       position:absolute;
       inset:-80px;
       background:
-        radial-gradient(circle at top left, rgba(255,138,92,.16), transparent 40%),
-        radial-gradient(circle at bottom right, rgba(157,169,255,.12), transparent 38%);
-      filter:blur(10px);
+        radial-gradient(circle at top left, rgba(122,169,255,.16), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,.08), transparent 35%);
+      filter:blur(12px);
+      z-index:0;
     }
 
     .profile{
@@ -209,14 +209,14 @@
 
     .profile-img{
       width:100%;
-      max-width:330px;
+      max-width:320px;
       aspect-ratio:1/1;
       object-fit:cover;
       border-radius:28px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 20px 45px rgba(0,0,0,.28);
       display:block;
       margin:0 auto 18px;
-      border:1px solid rgba(255,255,255,.11);
-      box-shadow:0 16px 40px rgba(0,0,0,.35);
     }
 
     .profile h2{
@@ -225,43 +225,39 @@
     }
 
     .profile .title{
-      font-weight:500;
-      color:#d8def0;
+      color:#dce6f5;
       margin-bottom:10px;
+      font-weight:500;
     }
 
     .profile .small{
-      color:var(--muted);
-      line-height:1.75;
+      color:var(--soft);
       font-size:.95rem;
+      line-height:1.7;
     }
 
     .tabcontent{
       display:none;
+      margin-top:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      animation:fadeUp .45s ease;
     }
 
     .tabcontent.active{
       display:block;
-      animation:fadeUp .45s ease;
     }
 
-    .section-box{
-      margin:18px 0 0;
-      padding:26px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      box-shadow:var(--shadow);
-    }
-
-    .section-box h3{
-      font-size:1.7rem;
+    .tabcontent h3{
+      font-size:1.55rem;
       margin-bottom:12px;
     }
 
-    .section-box p,
-    .section-box li{
-      color:var(--muted);
+    .tabcontent p,.tabcontent li{
+      color:var(--soft);
       line-height:1.8;
     }
 
@@ -272,15 +268,8 @@
       margin-top:18px;
     }
 
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      margin-top:18px;
-    }
-
     .info-card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      background:rgba(255,255,255,.04);
       border:1px solid var(--line);
       border-radius:18px;
       padding:18px;
@@ -296,9 +285,9 @@
     .pill{
       padding:9px 13px;
       border-radius:999px;
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.08);
-      color:#edf1ff;
+      color:#f4f7fc;
       font-size:.9rem;
     }
 
@@ -322,21 +311,29 @@
       height:12px;
       border-radius:50%;
       background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:0 0 18px rgba(255,122,69,.45);
+      box-shadow:0 0 18px rgba(122,169,255,.45);
     }
 
-    .timeline-item h4{margin-bottom:5px;color:#fff}
-    .timeline-item .meta{font-size:.86rem;color:#c7cee4;margin-bottom:6px}
+    .timeline-item h4{
+      margin-bottom:5px;
+      color:#fff;
+    }
+
+    .timeline-item .meta{
+      font-size:.86rem;
+      color:#c7d2e8;
+      margin-bottom:6px;
+    }
 
     .contact-grid{
       display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      grid-template-columns:1fr 1fr;
       gap:16px;
       margin-top:16px;
     }
 
     .contact-item{
-      background:rgba(255,255,255,.04);
+      background:rgba(255,255,255,.05);
       border:1px solid var(--line);
       border-radius:18px;
       padding:16px;
@@ -349,20 +346,14 @@
       margin-bottom:6px;
     }
 
-    .muted-note{
-      color:var(--muted);
-      font-size:.92rem;
-      margin-top:10px;
-    }
-
     @keyframes fadeUp{
       from{opacity:0;transform:translateY(14px)}
       to{opacity:1;transform:translateY(0)}
     }
 
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;min-height:auto}
-      .grid-2,.grid-3,.contact-grid{grid-template-columns:1fr}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;min-height:auto;padding-top:24px}
+      .grid-2,.contact-grid{grid-template-columns:1fr}
       .nav-inner{justify-content:center}
       .hero-text{order:2}
       .hero-card{order:1}
@@ -374,224 +365,4 @@
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand">
-        <div class="brand-mark">S</div>
-        <div>
-          <div>Snehal More</div>
-          <small style="color: var(--muted); font-weight: 400;">Business Development & Account Management</small>
-        </div>
-      </div>
-
-      <nav class="tabs" role="tablist" aria-label="Portfolio sections">
-        <button class="tablinks active" role="tab" aria-selected="true" aria-controls="about" id="about-tab" onclick="openTab(event, 'about')">About</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="skills" id="skills-tab" onclick="openTab(event, 'skills')">Skills</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="experience" id="experience-tab" onclick="openTab(event, 'experience')">Experience</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="education" id="education-tab" onclick="openTab(event, 'education')">Education</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="certification" id="certification-tab" onclick="openTab(event, 'certification')">Certification</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="achievements" id="achievements-tab" onclick="openTab(event, 'achievements')">Achievements</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="contact" id="contact-tab" onclick="openTab(event, 'contact')">Contact</button>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Hi, I'm <span class="gradient">Snehal More</span></h1>
-        <p>
-          Business Development professional with strong experience in account management,
-          client relationships, solution selling, and revenue growth.
-        </p>
-
-        <div class="hero-meta">
-          <div class="meta-chip">Copenhagen, Denmark</div>
-          <div class="meta-chip">English & Danish</div>
-          <div class="meta-chip">Salesforce / HubSpot</div>
-        </div>
-
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="openTabById('contact')">Contact Me</button>
-          <button class="btn btn-secondary" onclick="openTabById('experience')">View Experience</button>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="profile">
-          <img src="profile.jpg" alt="Snehal More" class="profile-img">
-          <h2>Snehal More</h2>
-          <div class="title">
-            Business Development | Account Management | B2B and B2C | Revenue Growth | Sales Strategy
-          </div>
-          <div class="small">
-            Email: moresnehalsanjay@gmail.com<br>
-            Phone: +45 55 20 60 77<br>
-            LinkedIn: linkedin.com/in/snehal-more-12a31614b
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="tabcontent active section-box" role="tabpanel" aria-labelledby="about-tab">
-      <h3>About</h3>
-      <p>
-        As a seasoned Sales Business Manager, I bring extensive experience in client relationship management,
-        strategic account planning, and solution development to drive business growth and deliver value-driven outcomes.
-      </p>
-      <div class="grid-2">
-        <div class="info-card">
-          <h4>Summary</h4>
-          <p>
-            I have a strong technical foundation in Electronics & Telecommunication Engineering and a proven track record
-            managing diverse client portfolios.
-          </p>
-        </div>
-        <div class="info-card">
-          <h4>Why I stand out</h4>
-          <p>
-            Since moving to Denmark, I have been learning Danish, volunteering, and networking to strengthen my adaptability
-            and intercultural communication.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="tabcontent section-box" role="tabpanel" aria-labelledby="skills-tab">
-      <h3>Skills</h3>
-      <div class="pill-list">
-        <span class="pill">Strategic Account Management</span>
-        <span class="pill">Client Retention</span>
-        <span class="pill">B2B & B2C Sales Strategy</span>
-        <span class="pill">Business Development</span>
-        <span class="pill">Market Expansion</span>
-        <span class="pill">Solution Selling</span>
-        <span class="pill">Negotiation</span>
-        <span class="pill">Customer Success</span>
-        <span class="pill">Cross-Functional Collaboration</span>
-        <span class="pill">Data-Driven Decision Making</span>
-        <span class="pill">Project Management</span>
-        <span class="pill">Salesforce</span>
-        <span class="pill">HubSpot</span>
-      </div>
-    </section>
-
-    <section id="experience" class="tabcontent section-box" role="tabpanel" aria-labelledby="experience-tab">
-      <h3>Experience</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Business Development & Sales Manager — FinVachi Technologies Private Limited</h4>
-          <div class="meta">June 2023 – June 2024 · Noida, India</div>
-          <p>Managed strategic client relationships, analyzed growth opportunities, collaborated across teams, and improved platform adoption.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Sales Manager - Assistant Manager — FinoFy Technologies Limited</h4>
-          <div class="meta">October 2022 – May 2023 · Thane, India</div>
-          <p>Managed SMB and enterprise clients, supported onboarding, improved internal efficiency by 20%, and drove account growth.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Senior Client Relationship Manager — CapitalVia Global Research Limited</h4>
-          <div class="meta">November 2020 – April 2022 · Mumbai, India</div>
-          <p>Supported high-value clients, increased revenue through upselling, and mentored junior team members.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Client Acquisition Manager — CapitalVia Global Research Limited</h4>
-          <div class="meta">September 2020 – October 2021 · Indore, India</div>
-          <p>Built client acquisition pipelines, used consultative selling, and improved onboarding and client satisfaction.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="tabcontent section-box" role="tabpanel" aria-labelledby="education-tab">
-      <h3>Education</h3>
-      <div class="grid-3">
-        <div class="info-card">
-          <h4>Karmaveer Baburao Thakare College of Engineering</h4>
-          <p>Bachelors In Engineering, Electronics and Telecommunication · 2017 – 2020</p>
-        </div>
-        <div class="info-card">
-          <h4>Government Polytechnic Nashik</h4>
-          <p>Diploma, Electronics and Telecommunication · 2014 – 2017</p>
-        </div>
-        <div class="info-card">
-          <h4>MVPs Janata Vidyalaya Pavannagar, Cidco, Nashik</h4>
-          <p>Bachelors in Engineering, Electronics and Telecommunication Engineer · 2009 – 2014</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="certification" class="tabcontent section-box" role="tabpanel" aria-labelledby="certification-tab">
-      <h3>Certification</h3>
-      <div class="grid-2">
-        <div class="info-card">
-          <h4>Professional Certification</h4>
-          <p>Add your certification name here, such as Salesforce, HubSpot, sales training, or other professional courses.</p>
-        </div>
-        <div class="info-card">
-          <h4>Learning & Development</h4>
-          <p>Include workshops, short courses, online training, or volunteer learning experience that support your career growth.</p>
-        </div>
-      </div>
-      <p class="muted-note">If you share your certification details, I can fill this section properly for you.</p>
-    </section>
-
-    <section id="achievements" class="tabcontent section-box" role="tabpanel" aria-labelledby="achievements-tab">
-      <h3>Achievements</h3>
-      <div class="pill-list">
-        <span class="pill">Revenue Growth</span>
-        <span class="pill">Account Expansion</span>
-        <span class="pill">Client Retention</span>
-        <span class="pill">Platform Adoption</span>
-        <span class="pill">20% Efficiency Improvement</span>
-        <span class="pill">Team Coaching</span>
-      </div>
-    </section>
-
-    <section id="contact" class="tabcontent section-box" role="tabpanel" aria-labelledby="contact-tab">
-      <h3>Contact</h3>
-      <p>Feel free to reach out for opportunities, collaborations, or networking.</p>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span>Email</span>
-          moresnehalsanjay@gmail.com
-        </div>
-        <div class="contact-item">
-          <span>Phone</span>
-          +45 55 20 60 77
-        </div>
-        <div class="contact-item">
-          <span>LinkedIn</span>
-          linkedin.com/in/snehal-more-12a31614b
-        </div>
-        <div class="contact-item">
-          <span>Location</span>
-          Copenhagen, Capital Region of Denmark, Denmark
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    function openTab(evt, tabName) {
-      const tabcontent = document.getElementsByClassName("tabcontent");
-      const tablinks = document.getElementsByClassName("tablinks");
-
-      for (let i = 0; i < tabcontent.length; i++) tabcontent[i].classList.remove("active");
-      for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-        tablinks[i].setAttribute("aria-selected", "false");
-      }
-
-      document.getElementById(tabName).classList.add("active");
-      evt.currentTarget.classList.add("active");
-      evt.currentTarget.setAttribute("aria-selected", "true");
-      document.getElementById(tabName).scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function openTabById(id) {
-      const button = document.getElementById(id + "-tab");
-      if (button) button.click();
-    }
-
-    document.getElementById("about-tab").click();
-  </script>
-</body>
-</html>
+        
