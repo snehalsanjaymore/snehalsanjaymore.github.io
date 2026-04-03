@@ -265,4 +265,257 @@
       border:1px solid rgba(255,255,255,.16);
       padding:12px 13px;
       font-size:.9rem;
-    
+    }
+
+    .contact-item span{
+      display:block;
+      font-weight:600;
+      margin-bottom:4px;
+      color:var(--white);
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(8px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @media (max-width:900px){
+      .layout{flex-direction:column}
+      .left-panel{position:relative;width:100%;border-right:none;border-bottom:1px solid rgba(255,255,255,.15);display:flex;justify-content:center}
+      .right-panel{padding:22px 18px}
+      .contact-grid,.grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+  <!-- LEFT SIDE: photo, name, quick info -->
+  <aside class="left-panel">
+    <div class="profile-wrapper">
+      <img src="profile.jpg" alt="Snehal More" class="profile-img">
+      <div class="name">Snehal More</div>
+      <div class="role">Business Development · Account Management · Sales Strategy</div>
+      <div class="location">Copenhagen, Capital Region of Denmark</div>
+    </div>
+
+    <div class="side-section-title">Contact</div>
+    <ul class="side-list">
+      <li>Email: moresnehalsanjay@gmail.com</li>
+      <li>Phone: +45 55 20 60 77</li>
+      <li>LinkedIn: <small>linkedin.com/in/snehal-more-12a31614b</small></li>
+    </ul>
+
+    <div class="side-section-title">Languages</div>
+    <ul class="side-list">
+      <li>Danish – Elementary</li>
+      <li>English – Professional Working</li>
+    </ul>
+
+    <div class="side-section-title">Top Skills</div>
+    <ul class="side-list">
+      <li>New Business Opportunities</li>
+      <li>Key Performance Indicators</li>
+      <li>Spoken English</li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT SIDE: tabs + sections -->
+  <main class="right-panel">
+    <div class="top-bar">
+      <div class="headline">Sales & Business Development Portfolio</div>
+      <nav class="tabs">
+        <button class="tablinks active" onclick="openTab(event,'about')" id="defaultOpen">About</button>
+        <button class="tablinks" onclick="openTab(event,'skills')">Skills</button>
+        <button class="tablinks" onclick="openTab(event,'experience')">Experience</button>
+        <button class="tablinks" onclick="openTab(event,'education')">Education</button>
+        <button class="tablinks" onclick="openTab(event,'certs')">Achievements & Certifications</button>
+        <button class="tablinks" onclick="openTab(event,'contact')">Contact</button>
+      </nav>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="tabcontent active">
+      <div class="section-box">
+        <h2>About</h2>
+        <p>
+          As a seasoned Sales Business Manager, I bring extensive experience in client relationship management,
+          strategic account planning, and solution development to drive business growth and deliver value‑driven outcomes.
+        </p>
+        <div class="grid-2">
+          <div class="info-card">
+            <h3>Professional focus</h3>
+            <p>
+              Strong foundation in Electronics & Telecommunication Engineering with a proven record managing diverse
+              client portfolios, identifying growth opportunities, and building strategic partnerships.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Life in Denmark</h3>
+            <p>
+              Since moving to Denmark, I have been learning Danish, volunteering, and networking to understand the
+              local culture and business environment, strengthening my adaptability and intercultural communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="tabcontent">
+      <div class="section-box">
+        <h2>Skills</h2>
+        <p>Core skills and competencies I bring to sales and business development roles.</p>
+        <div class="pill-list">
+          <span class="pill">Strategic Account Management</span>
+          <span class="pill">Key Client Retention</span>
+          <span class="pill">B2B & B2C Sales Strategy</span>
+          <span class="pill">Business Development & Market Expansion</span>
+          <span class="pill">Solution Selling & Consultative Sales</span>
+          <span class="pill">Negotiation & Contract Management</span>
+          <span class="pill">Customer Success & Experience Optimization</span>
+          <span class="pill">Cross‑Functional Collaboration</span>
+          <span class="pill">Data‑Driven Decision Making</span>
+          <span class="pill">Project Management & Process Improvement</span>
+          <span class="pill">Salesforce & HubSpot</span>
+          <span class="pill">Intercultural Communication</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="tabcontent">
+      <div class="section-box">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Business Development & Sales Manager · FinVachi Technologies Pvt. Ltd.</h3>
+            <div class="meta">June 2023 – June 2024 · Noida, India</div>
+            <p>
+              Spearheaded strategic client relationships, conducted data‑driven growth analysis, collaborated with
+              cross‑functional teams to build tailored solutions, and led client engagement programs to increase
+              adoption and retention.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Sales Manager – Assistant Manager · FinoFy Technologies Limited</h3>
+            <div class="meta">October 2022 – May 2023 · Thane, India</div>
+            <p>
+              Managed SMB and enterprise portfolios, led onboarding of digital solutions, optimized internal processes
+              (20% efficiency improvement), and developed account plans to drive expansion and revenue.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Senior Client Relationship Manager · CapitalVia Global Research Ltd.</h3>
+            <div class="meta">November 2020 – April 2022 · Mumbai, India</div>
+            <p>
+              Acted as trusted advisor to high‑value clients, increased average account revenue through upselling,
+              and mentored junior team members in communication and service delivery.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Client Acquisition Manager · CapitalVia Global Research Ltd.</h3>
+            <div class="meta">September 2020 – October 2021 · Indore, India</div>
+            <p>
+              Designed and executed client acquisition strategies, led consultative selling, and implemented onboarding
+              programs that improved satisfaction and reduced churn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="tabcontent">
+      <div class="section-box">
+        <h2>Education</h2>
+        <div class="grid-2">
+          <div class="info-card">
+            <h3>Karmaveer Baburao Thakare College of Engineering</h3>
+            <p>Bachelors in Engineering, Electronics & Telecommunication · 2017 – 2020</p>
+          </div>
+          <div class="info-card">
+            <h3>Government Polytechnic Nashik</h3>
+            <p>Diploma, Electronics & Telecommunication · 2014 – 2017</p>
+          </div>
+          <div class="info-card">
+            <h3>MVPs Janata Vidyalaya Pavannagar, Nashik</h3>
+            <p>Schooling with focus on science and engineering preparation · 2009 – 2014</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS -->
+    <section id="certs" class="tabcontent">
+      <div class="section-box">
+        <h2>Achievements & Certifications</h2>
+        <div class="grid-2">
+          <div class="info-card">
+            <h3>Key achievements</h3>
+            <ul>
+              <li>Increased account value and revenue across multiple portfolios through data‑driven strategies.</li>
+              <li>Improved internal efficiency by 20% via process optimization and cross‑team collaboration.</li>
+              <li>Strengthened platform adoption and retention through targeted engagement and education programs.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Certifications (example placeholders)</h3>
+            <ul>
+              <li>Salesforce CRM Essentials – add provider & year.</li>
+              <li>HubSpot CRM / Inbound Sales – add provider & year.</li>
+              <li>Consultative & Solution Selling – add provider & year.</li>
+            </ul>
+            <p style="margin-top:8px;font-size:.85rem;color:var(--muted);">
+              You can replace these lines with your real certificates when you get them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="tabcontent">
+      <div class="section-box">
+        <h2>Contact</h2>
+        <p>If you’d like to discuss an opportunity or collaboration, feel free to reach out.</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span>Email</span>
+            moresnehalsanjay@gmail.com
+          </div>
+          <div class="contact-item">
+            <span>Phone</span>
+            +45 55 20 60 77
+          </div>
+          <div class="contact-item">
+            <span>LinkedIn</span>
+            linkedin.com/in/snehal-more-12a31614b
+          </div>
+          <div class="contact-item">
+            <span>Location</span>
+            Copenhagen, Capital Region of Denmark, Denmark
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  function openTab(evt, tabName){
+    const tabs = document.getElementsByClassName("tabcontent");
+    const buttons = document.getElementsByClassName("tablinks");
+
+    for(let t of tabs){ t.classList.remove("active"); }
+    for(let b of buttons){ b.classList.remove("active"); }
+
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
