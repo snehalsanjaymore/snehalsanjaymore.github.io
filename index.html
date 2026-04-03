@@ -365,4 +365,206 @@
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand">
-        
+        <div class="brand-mark">S</div>
+        <div>
+          <div>Snehal More</div>
+          <small style="color:var(--soft);font-weight:400;">Sales & Business Development</small>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <button class="tablinks active" onclick="openTab(event, 'about')" id="defaultOpen">About</button>
+        <button class="tablinks" onclick="openTab(event, 'skills')">Skills</button>
+        <button class="tablinks" onclick="openTab(event, 'experience')">Experience</button>
+        <button class="tablinks" onclick="openTab(event, 'education')">Education</button>
+        <button class="tablinks" onclick="openTab(event, 'certifications')">Certifications</button>
+        <button class="tablinks" onclick="openTab(event, 'achievements')">Achievements</button>
+        <button class="tablinks" onclick="openTab(event, 'contact')">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="gradient">Snehal More</span></h1>
+        <p>
+          Business Development and Account Management professional with experience in
+          client relationship management, revenue growth, sales strategy, onboarding,
+          and cross-functional collaboration.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-chip">Copenhagen, Denmark</div>
+          <div class="meta-chip">B2B & B2C</div>
+          <div class="meta-chip">Salesforce</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openTabById('contact')">Contact Me</button>
+          <button class="btn btn-secondary" onclick="openTabById('experience')">My Experience</button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile">
+          <img src="profile.jpg" alt="Snehal More" class="profile-img">
+          <h2>Snehal More</h2>
+          <div class="title">
+            Business Development | Account Management | B2B and B2C | Revenue Growth | Sales Strategy
+          </div>
+          <div class="small">
+            Email: moresnehalsanjay@gmail.com<br>
+            LinkedIn: linkedin.com/in/snehal-more-12a31614b
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="tabcontent active">
+      <h3>About</h3>
+      <p>
+        As a seasoned Sales Business Manager, I bring extensive experience in client relationship management,
+        strategic account planning, and solution development to drive business growth and deliver value-driven outcomes.
+      </p>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4>Profile Summary</h4>
+          <p>
+            Strong technical foundation in Electronics & Telecommunication Engineering with a proven track record
+            of managing diverse client portfolios.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>Life in Denmark</h4>
+          <p>
+            I’ve been learning Danish, volunteering, and networking to grow my understanding of the local culture
+            and business environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="tabcontent">
+      <h3>Skills</h3>
+      <div class="pill-list">
+        <span class="pill">Strategic Account Management</span>
+        <span class="pill">Key Client Retention</span>
+        <span class="pill">B2B & B2C Sales Strategy</span>
+        <span class="pill">Business Development</span>
+        <span class="pill">Market Expansion</span>
+        <span class="pill">Consultative Sales</span>
+        <span class="pill">Negotiation</span>
+        <span class="pill">Customer Success</span>
+        <span class="pill">Data Analysis</span>
+        <span class="pill">Pipeline Management</span>
+        <span class="pill">Salesforce</span>
+        <span class="pill">HubSpot</span>
+      </div>
+    </section>
+
+    <section id="experience" class="tabcontent">
+      <h3>Experience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Business Development & Sales Manager — FinVachi Technologies Private Limited</h4>
+          <div class="meta">June 2023 – June 2024 · Noida, India</div>
+          <p>Built strategic client relationships, identified growth opportunities, and improved platform adoption through client education.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Sales Manager - Assistant Manager — FinoFy Technologies Limited</h4>
+          <div class="meta">October 2022 – May 2023 · Thane, India</div>
+          <p>Managed SMB and enterprise clients, supported onboarding, and improved efficiency by 20%.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>CapitalVia Global Research Limited</h4>
+          <div class="meta">September 2020 – April 2022 · Mumbai / Indore, India</div>
+          <p>Worked in client acquisition and relationship management, increasing revenue and client lifetime value through upselling and trusted advisory support.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="tabcontent">
+      <h3>Education</h3>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4>Karmaveer Baburao Thakare College of Engineering</h4>
+          <p>Bachelors In Engineering, Electronics and Telecommunication · 2017 – 2020</p>
+        </div>
+        <div class="info-card">
+          <h4>Government Polytechnic Nashik</h4>
+          <p>Diploma, Electronics and Telecommunication · 2014 – 2017</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="tabcontent">
+      <h3>Certifications</h3>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4>Sales & CRM Tools</h4>
+          <p>Salesforce, HubSpot, pipeline management, and customer relationship workflows.</p>
+        </div>
+        <div class="info-card">
+          <h4>Professional Development</h4>
+          <p>Communication, teamwork, cross-cultural adaptation, and business networking in Denmark.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="tabcontent">
+      <h3>Achievements</h3>
+      <div class="pill-list">
+        <span class="pill">Revenue Growth</span>
+        <span class="pill">Client Retention</span>
+        <span class="pill">20% Process Improvement</span>
+        <span class="pill">Platform Adoption</span>
+        <span class="pill">Team Collaboration</span>
+        <span class="pill">Upselling Success</span>
+      </div>
+    </section>
+
+    <section id="contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Let’s connect for sales, business development, or account management opportunities.</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span>Email</span>
+          moresnehalsanjay@gmail.com
+        </div>
+        <div class="contact-item">
+          <span>Phone</span>
+          +45 55 20 60 77
+        </div>
+        <div class="contact-item">
+          <span>LinkedIn</span>
+          linkedin.com/in/snehal-more-12a31614b
+        </div>
+        <div class="contact-item">
+          <span>Location</span>
+          Copenhagen, Capital Region of Denmark, Denmark
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function openTab(evt, tabName){
+      document.querySelectorAll(".tabcontent").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(".tablinks").forEach(el => el.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+      document.getElementById(tabName).scrollIntoView({behavior:"smooth", block:"start"});
+    }
+
+    function openTabById(id){
+      const button = [...document.querySelectorAll(".tablinks")]
+        .find(btn => btn.getAttribute("onclick")?.includes(`'${id}'`));
+      if(button) button.click();
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
