@@ -4,25 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Snehal More | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --navy:#002F6C;      /* Navy blue */      /* [web:75] */
-      --charcoal:#36454F;  /* Charcoal */       /* [web:78] */
-      --white:#FFFFFF;     /* Crisp white */    /* [web:75] */
-      --muted:#C0CAD8;
-      --line:rgba(255,255,255,.12);
-      --shadow:0 18px 50px rgba(0,0,0,.55);
-      --radius:18px;
+      --navy:#002F6C;
+      --charcoal:#36454F;
+      --white:#FFFFFF;
+      --muted:#D3DBE6;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.28);
+      --radius:16px;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       font-family:"Poppins",sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(0,47,108,.55), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(54,69,79,.65), #020712);
+      background:linear-gradient(135deg, #002F6C 0%, #121820 55%, #36454F 100%);
       color:var(--white);
       min-height:100vh;
     }
@@ -32,12 +38,11 @@
       min-height:100vh;
     }
 
-    /* LEFT PANEL: photo + name */
     .left-panel{
-      width:310px;
-      background:linear-gradient(180deg, var(--navy), #020712);
-      padding:28px 22px;
-      border-right:1px solid rgba(255,255,255,.12);
+      width:300px;
+      background:rgba(0,47,108,.92);
+      padding:24px 18px;
+      border-right:1px solid rgba(255,255,255,.10);
       box-shadow:var(--shadow);
       position:sticky;
       top:0;
@@ -50,40 +55,41 @@
 
     .profile-img{
       width:100%;
-      max-width:220px;
+      max-width:200px;
       aspect-ratio:1/1;
       object-fit:cover;
-      border-radius:24px;
-      border:2px solid rgba(255,255,255,.75);
-      box-shadow:0 14px 36px rgba(0,0,0,.55);
-      margin:0 auto 18px;
+      border-radius:20px;
+      border:2px solid rgba(255,255,255,.7);
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      margin:0 auto 16px;
       display:block;
     }
 
     .name{
-      font-size:1.7rem;
+      font-size:1.5rem;
       font-weight:700;
-      margin-bottom:4px;
+      margin-bottom:5px;
     }
 
     .role{
-      font-size:.95rem;
+      font-size:.92rem;
       color:var(--muted);
-      margin-bottom:14px;
+      margin-bottom:10px;
+      line-height:1.5;
     }
 
     .location{
-      font-size:.88rem;
+      font-size:.86rem;
       color:var(--muted);
-      margin-bottom:14px;
+      margin-bottom:16px;
     }
 
     .side-section-title{
-      font-size:.8rem;
+      font-size:.78rem;
       text-transform:uppercase;
-      letter-spacing:.15em;
+      letter-spacing:.14em;
       color:var(--muted);
-      margin:18px 0 8px;
+      margin:16px 0 8px;
       text-align:left;
     }
 
@@ -92,30 +98,36 @@
       font-size:.86rem;
       color:var(--white);
       text-align:left;
+      line-height:1.7;
     }
 
     .side-list li{
-      margin-bottom:6px;
+      margin-bottom:5px;
     }
 
     .side-list small{
       color:var(--muted);
       font-size:.8rem;
+      word-break:break-word;
     }
 
-    /* RIGHT PANEL: tabs + content */
     .right-panel{
       flex:1;
-      padding:28px 32px;
+      padding:24px;
     }
 
     .top-bar{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      margin-bottom:18px;
-      flex-wrap:wrap;
       gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+
+    .headline{
+      font-size:1.05rem;
+      color:var(--muted);
     }
 
     .tabs{
@@ -126,36 +138,29 @@
 
     .tablinks{
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(1,10,20,.55);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.03);
       color:var(--muted);
-      padding:8px 16px;
-      font-size:.88rem;
+      padding:8px 14px;
+      font-size:.85rem;
       cursor:pointer;
-      transition:.25s ease;
+      transition:.22s ease;
     }
 
     .tablinks:hover{
-      background:rgba(255,255,255,.08);
       color:var(--white);
+      background:rgba(255,255,255,.08);
     }
 
     .tablinks.active{
       background:var(--white);
       color:var(--navy);
       border-color:transparent;
-      box-shadow:0 10px 26px rgba(0,0,0,.45);
-    }
-
-    .headline{
-      font-size:1.1rem;
-      font-weight:500;
-      color:var(--muted);
     }
 
     .tabcontent{
       display:none;
-      margin-top:12px;
+      margin-top:10px;
     }
 
     .tabcontent.active{
@@ -164,42 +169,43 @@
     }
 
     .section-box{
-      background:rgba(6,12,22,.9);
-      border-radius:var(--radius);
+      background:rgba(8,14,24,.82);
       border:1px solid var(--line);
-      padding:20px 22px;
+      border-radius:var(--radius);
+      padding:18px 20px;
       box-shadow:var(--shadow);
     }
 
     .section-box h2{
-      font-size:1.4rem;
+      font-size:1.25rem;
       margin-bottom:8px;
     }
 
     .section-box p,
     .section-box li{
       color:var(--muted);
-      line-height:1.7;
+      line-height:1.75;
       font-size:.93rem;
     }
 
     .grid-2{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:16px;
+      gap:14px;
       margin-top:14px;
     }
 
     .info-card{
-      background:rgba(255,255,255,.02);
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      padding:14px 15px;
+      background:rgba(255,255,255,.015);
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      padding:14px;
     }
 
     .info-card h3{
       font-size:1rem;
-      margin-bottom:6px;
+      margin-bottom:5px;
+      color:var(--white);
     }
 
     .pill-list{
@@ -212,14 +218,14 @@
     .pill{
       padding:7px 11px;
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.03);
       font-size:.84rem;
       color:var(--white);
     }
 
     .timeline{
-      border-left:1px solid rgba(255,255,255,.25);
+      border-left:1px solid rgba(255,255,255,.18);
       padding-left:16px;
       margin-top:8px;
     }
@@ -238,12 +244,13 @@
       height:10px;
       border-radius:50%;
       background:var(--white);
-      box-shadow:0 0 12px rgba(255,255,255,.8);
+      box-shadow:0 0 10px rgba(255,255,255,.6);
     }
 
     .timeline-item h3{
       font-size:.98rem;
       margin-bottom:4px;
+      color:var(--white);
     }
 
     .timeline-item .meta{
@@ -254,268 +261,4 @@
 
     .contact-grid{
       display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      margin-top:12px;
-    }
-
-    .contact-item{
-      background:rgba(255,255,255,.02);
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.16);
-      padding:12px 13px;
-      font-size:.9rem;
-    }
-
-    .contact-item span{
-      display:block;
-      font-weight:600;
-      margin-bottom:4px;
-      color:var(--white);
-    }
-
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(8px)}
-      to{opacity:1;transform:translateY(0)}
-    }
-
-    @media (max-width:900px){
-      .layout{flex-direction:column}
-      .left-panel{position:relative;width:100%;border-right:none;border-bottom:1px solid rgba(255,255,255,.15);display:flex;justify-content:center}
-      .right-panel{padding:22px 18px}
-      .contact-grid,.grid-2{grid-template-columns:1fr}
-    }
-  </style>
-</head>
-<body>
-
-<div class="layout">
-  <!-- LEFT SIDE: photo, name, quick info -->
-  <aside class="left-panel">
-    <div class="profile-wrapper">
-      <img src="profile.jpg" alt="Snehal More" class="profile-img">
-      <div class="name">Snehal More</div>
-      <div class="role">Business Development · Account Management · Sales Strategy</div>
-      <div class="location">Copenhagen, Capital Region of Denmark</div>
-    </div>
-
-    <div class="side-section-title">Contact</div>
-    <ul class="side-list">
-      <li>Email: moresnehalsanjay@gmail.com</li>
-      <li>Phone: +45 55 20 60 77</li>
-      <li>LinkedIn: <small>linkedin.com/in/snehal-more-12a31614b</small></li>
-    </ul>
-
-    <div class="side-section-title">Languages</div>
-    <ul class="side-list">
-      <li>Danish – Elementary</li>
-      <li>English – Professional Working</li>
-    </ul>
-
-    <div class="side-section-title">Top Skills</div>
-    <ul class="side-list">
-      <li>New Business Opportunities</li>
-      <li>Key Performance Indicators</li>
-      <li>Spoken English</li>
-    </ul>
-  </aside>
-
-  <!-- RIGHT SIDE: tabs + sections -->
-  <main class="right-panel">
-    <div class="top-bar">
-      <div class="headline">Sales & Business Development Portfolio</div>
-      <nav class="tabs">
-        <button class="tablinks active" onclick="openTab(event,'about')" id="defaultOpen">About</button>
-        <button class="tablinks" onclick="openTab(event,'skills')">Skills</button>
-        <button class="tablinks" onclick="openTab(event,'experience')">Experience</button>
-        <button class="tablinks" onclick="openTab(event,'education')">Education</button>
-        <button class="tablinks" onclick="openTab(event,'certs')">Achievements & Certifications</button>
-        <button class="tablinks" onclick="openTab(event,'contact')">Contact</button>
-      </nav>
-    </div>
-
-    <!-- ABOUT -->
-    <section id="about" class="tabcontent active">
-      <div class="section-box">
-        <h2>About</h2>
-        <p>
-          As a seasoned Sales Business Manager, I bring extensive experience in client relationship management,
-          strategic account planning, and solution development to drive business growth and deliver value‑driven outcomes.
-        </p>
-        <div class="grid-2">
-          <div class="info-card">
-            <h3>Professional focus</h3>
-            <p>
-              Strong foundation in Electronics & Telecommunication Engineering with a proven record managing diverse
-              client portfolios, identifying growth opportunities, and building strategic partnerships.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Life in Denmark</h3>
-            <p>
-              Since moving to Denmark, I have been learning Danish, volunteering, and networking to understand the
-              local culture and business environment, strengthening my adaptability and intercultural communication.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="tabcontent">
-      <div class="section-box">
-        <h2>Skills</h2>
-        <p>Core skills and competencies I bring to sales and business development roles.</p>
-        <div class="pill-list">
-          <span class="pill">Strategic Account Management</span>
-          <span class="pill">Key Client Retention</span>
-          <span class="pill">B2B & B2C Sales Strategy</span>
-          <span class="pill">Business Development & Market Expansion</span>
-          <span class="pill">Solution Selling & Consultative Sales</span>
-          <span class="pill">Negotiation & Contract Management</span>
-          <span class="pill">Customer Success & Experience Optimization</span>
-          <span class="pill">Cross‑Functional Collaboration</span>
-          <span class="pill">Data‑Driven Decision Making</span>
-          <span class="pill">Project Management & Process Improvement</span>
-          <span class="pill">Salesforce & HubSpot</span>
-          <span class="pill">Intercultural Communication</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="tabcontent">
-      <div class="section-box">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>Business Development & Sales Manager · FinVachi Technologies Pvt. Ltd.</h3>
-            <div class="meta">June 2023 – June 2024 · Noida, India</div>
-            <p>
-              Spearheaded strategic client relationships, conducted data‑driven growth analysis, collaborated with
-              cross‑functional teams to build tailored solutions, and led client engagement programs to increase
-              adoption and retention.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>Sales Manager – Assistant Manager · FinoFy Technologies Limited</h3>
-            <div class="meta">October 2022 – May 2023 · Thane, India</div>
-            <p>
-              Managed SMB and enterprise portfolios, led onboarding of digital solutions, optimized internal processes
-              (20% efficiency improvement), and developed account plans to drive expansion and revenue.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>Senior Client Relationship Manager · CapitalVia Global Research Ltd.</h3>
-            <div class="meta">November 2020 – April 2022 · Mumbai, India</div>
-            <p>
-              Acted as trusted advisor to high‑value clients, increased average account revenue through upselling,
-              and mentored junior team members in communication and service delivery.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>Client Acquisition Manager · CapitalVia Global Research Ltd.</h3>
-            <div class="meta">September 2020 – October 2021 · Indore, India</div>
-            <p>
-              Designed and executed client acquisition strategies, led consultative selling, and implemented onboarding
-              programs that improved satisfaction and reduced churn.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="tabcontent">
-      <div class="section-box">
-        <h2>Education</h2>
-        <div class="grid-2">
-          <div class="info-card">
-            <h3>Karmaveer Baburao Thakare College of Engineering</h3>
-            <p>Bachelors in Engineering, Electronics & Telecommunication · 2017 – 2020</p>
-          </div>
-          <div class="info-card">
-            <h3>Government Polytechnic Nashik</h3>
-            <p>Diploma, Electronics & Telecommunication · 2014 – 2017</p>
-          </div>
-          <div class="info-card">
-            <h3>MVPs Janata Vidyalaya Pavannagar, Nashik</h3>
-            <p>Schooling with focus on science and engineering preparation · 2009 – 2014</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENTS & CERTIFICATIONS -->
-    <section id="certs" class="tabcontent">
-      <div class="section-box">
-        <h2>Achievements & Certifications</h2>
-        <div class="grid-2">
-          <div class="info-card">
-            <h3>Key achievements</h3>
-            <ul>
-              <li>Increased account value and revenue across multiple portfolios through data‑driven strategies.</li>
-              <li>Improved internal efficiency by 20% via process optimization and cross‑team collaboration.</li>
-              <li>Strengthened platform adoption and retention through targeted engagement and education programs.</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <h3>Certifications (example placeholders)</h3>
-            <ul>
-              <li>Salesforce CRM Essentials – add provider & year.</li>
-              <li>HubSpot CRM / Inbound Sales – add provider & year.</li>
-              <li>Consultative & Solution Selling – add provider & year.</li>
-            </ul>
-            <p style="margin-top:8px;font-size:.85rem;color:var(--muted);">
-              You can replace these lines with your real certificates when you get them.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="tabcontent">
-      <div class="section-box">
-        <h2>Contact</h2>
-        <p>If you’d like to discuss an opportunity or collaboration, feel free to reach out.</p>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <span>Email</span>
-            moresnehalsanjay@gmail.com
-          </div>
-          <div class="contact-item">
-            <span>Phone</span>
-            +45 55 20 60 77
-          </div>
-          <div class="contact-item">
-            <span>LinkedIn</span>
-            linkedin.com/in/snehal-more-12a31614b
-          </div>
-          <div class="contact-item">
-            <span>Location</span>
-            Copenhagen, Capital Region of Denmark, Denmark
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-</div>
-
-<script>
-  function openTab(evt, tabName){
-    const tabs = document.getElementsByClassName("tabcontent");
-    const buttons = document.getElementsByClassName("tablinks");
-
-    for(let t of tabs){ t.classList.remove("active"); }
-    for(let b of buttons){ b.classList.remove("active"); }
-
-    document.getElementById(tabName).classList.add("active");
-    evt.currentTarget.classList.add("active");
-  }
-
-  document.getElementById("defaultOpen").click();
-</script>
-
-</body>
-</html>
+      
