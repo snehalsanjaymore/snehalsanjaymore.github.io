@@ -176,4 +176,363 @@
       flex-direction:column;
       gap:10px;
     }
-    ul.clean 
+    ul.clean li{
+      color:#dbe4ef;
+      padding-left:18px;
+      position:relative;
+    }
+    ul.clean li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color:var(--accent-2);
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:4px;
+    }
+    .chip{
+      background:var(--chip);
+      color:#d8e1ec;
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.92rem;
+    }
+    .section{
+      margin-top:26px;
+    }
+    .section-header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .section-header h2{
+      font-size:1.55rem;
+      line-height:1.1;
+      letter-spacing:-0.02em;
+      white-space:nowrap;
+    }
+    .section-line{
+      height:1px;
+      background:var(--border);
+      width:100%;
+    }
+    .section-card{
+      padding:26px 28px;
+    }
+    .text{
+      color:#d8e1ec;
+      margin-bottom:16px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .mini-card{
+      background:rgba(255,255,255,0.025);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:20px;
+    }
+    .mini-card h3{
+      font-size:1.1rem;
+      margin-bottom:12px;
+    }
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .skill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.02);
+      color:#dce5f0;
+      border-radius:999px;
+      padding:9px 14px;
+      font-size:.94rem;
+    }
+    .timeline{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .item{
+      padding:18px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .item:last-child{border-bottom:none;padding-bottom:0}
+    .item-top{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:8px;
+      flex-wrap:wrap;
+    }
+    .item-title{
+      font-weight:800;
+      font-size:1.02rem;
+    }
+    .item-meta{
+      color:var(--muted);
+      font-size:.93rem;
+    }
+    .item-desc{
+      color:#d8e1ec;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .contact-item{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.02);
+      color:#dbe4ef;
+    }
+    .contact-label{
+      display:block;
+      color:var(--muted);
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      margin-bottom:6px;
+    }
+    .footer{
+      margin-top:24px;
+      color:var(--muted);
+      font-size:.9rem;
+      text-align:center;
+      padding:12px 0 2px;
+    }
+    @media (max-width: 1100px){
+      .page{grid-template-columns:1fr}
+      .sidebar{
+        position:relative;
+        height:auto;
+        border-right:none;
+        border-bottom:1px solid var(--border);
+      }
+      .content{padding:22px}
+      .hero{grid-template-columns:1fr}
+      .grid-2, .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .content{padding:16px}
+      .sidebar{padding:22px 18px}
+      .hero-main,.hero-side,.section-card{padding:20px}
+      h1{font-size:2rem}
+      .name{font-size:1.7rem}
+      .avatar-wrap{width:128px;height:128px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="avatar-wrap">
+        <img class="avatar" src="pic.jpg" alt="Snehal More portrait" />
+      </div>
+      <div class="name">Snehal More</div>
+      <div class="role"><span>Key Account Manager</span><br />B2B &amp; B2C Sales · Fintech</div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Sections</div>
+        <nav class="nav">
+          <a href="#about">About &amp; journey</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Snapshot</div>
+        <div style="color:#dbe4ef; display:flex; flex-direction:column; gap:10px;">
+          <div>3.5+ years in sales and account management</div>
+          <div>Fintech, customer success, and relationship growth</div>
+          <div>Copenhagen-based, open to international teams</div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        Professional portfolio · Danish market focus
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="hero-main">
+          <div class="eyebrow">About &amp; journey</div>
+          <h1>Sales, account growth, and client relationships with a fintech mindset.</h1>
+          <p class="lead">
+            I help businesses build strong customer relationships, grow accounts, and keep a clear focus on long-term value.
+            My background spans sales management, business development, account management, and customer success in corporate and fintech environments.
+          </p>
+        </div>
+
+        <div class="hero-side">
+          <div>
+            <div class="snapshot-title">Snapshot</div>
+            <ul class="clean">
+              <li>Key Account Manager, B2B &amp; B2C Sales</li>
+              <li>Fintech and corporate sector experience</li>
+              <li>Customer success and relationship management</li>
+              <li>Copenhagen, Denmark</li>
+            </ul>
+          </div>
+          <div>
+            <div class="snapshot-title">Focus areas</div>
+            <div class="chips">
+              <span class="chip">Sales strategy</span>
+              <span class="chip">Account growth</span>
+              <span class="chip">Customer success</span>
+              <span class="chip">LinkedIn branding</span>
+              <span class="chip">ATS-friendly CV</span>
+              <span class="chip">Danish market</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2>About</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-card">
+          <p class="text">
+            I focus on helping clients feel understood, supported, and confident in the next step.
+            My working style is practical, relationship-driven, and organized, with a strong interest in building a polished professional presence.
+          </p>
+          <p class="text">
+            I am also actively adapting my CV, LinkedIn, and portfolio for the Danish market, with a clean and minimal style that reflects professionalism and clarity.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-card">
+          <div class="skills">
+            <span class="skill">Account Management</span>
+            <span class="skill">Business Development</span>
+            <span class="skill">Sales Management</span>
+            <span class="skill">Customer Success</span>
+            <span class="skill">Client Retention</span>
+            <span class="skill">Negotiation</span>
+            <span class="skill">CRM</span>
+            <span class="skill">LinkedIn Optimization</span>
+            <span class="skill">CV Design</span>
+            <span class="skill">Danish Learning</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Canva</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-card">
+          <div class="timeline">
+            <div class="item">
+              <div class="item-top">
+                <div class="item-title">Key Account Manager / Sales Manager</div>
+                <div class="item-meta">Fintech / Corporate</div>
+              </div>
+              <div class="item-desc">
+                Managing relationships, driving account growth, supporting customers, and identifying new opportunities through consultative sales.
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-top">
+                <div class="item-title">Business Development / Account Management</div>
+                <div class="item-meta">Fintech / Corporate</div>
+              </div>
+              <div class="item-desc">
+                Building pipelines, supporting customer journeys, and collaborating across teams to improve retention and growth.
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-top">
+                <div class="item-title">Customer Support / Customer Success</div>
+                <div class="item-meta">Corporate</div>
+              </div>
+              <div class="item-desc">
+                Resolving client needs, improving communication, and supporting a consistent and positive customer experience.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-header">
+          <h2>Education</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-card">
+          <div class="grid-2">
+            <div class="mini-card">
+              <h3>Professional Development</h3>
+              <div class="item-desc">
+                Ongoing learning in Danish language, personal branding, and AI tools for productivity and portfolio creation.
+              </div>
+            </div>
+            <div class="mini-card">
+              <h3>Technical Skills</h3>
+              <div class="item-desc">
+                Working knowledge of HTML and CSS for simple portfolio customization and digital presentation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="section-card">
+          <p class="text">
+            Open to networking, collaborations, and opportunities in sales, business development, account management, and customer success.
+          </p>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              linkedin.com/in/snehal-more-12a31614b
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              Copenhagen, Denmark
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Focus</span>
+              Fintech · Sales · Customer Success
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        © 2026 Snehal More
+      </div>
+    </main>
+  </div>
+</body>
+</html>
